@@ -100,7 +100,7 @@ public class CustomerServiceImpl implements CustomerService {
 		driver.getCab().setAvailable(true);
 		driverRepository2.save(driver);
 		tripBooking.setDriver(null);
-//		tripBookingRepository2.save(tripBooking);
+		tripBookingRepository2.save(tripBooking);
 		customerRepository2.save(customer);
 	}
 
