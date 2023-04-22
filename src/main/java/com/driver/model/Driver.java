@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 public class Driver {
     private int driverId;
-    private String mobileNo;
+    private String mobile;
     private String password;
 
     @OneToOne
@@ -20,9 +20,9 @@ public class Driver {
     public Driver() {
     }
 
-    public Driver(int driverId, String mobileNo, String password) {
+    public Driver(int driverId, String mobile, String password) {
         this.driverId = driverId;
-        this.mobileNo = mobileNo;
+        this.mobile = mobile;
         this.password = password;
     }
 
@@ -34,12 +34,12 @@ public class Driver {
         this.driverId = driverId;
     }
 
-    public String getMobileNo() {
-        return mobileNo;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getPassword() {
