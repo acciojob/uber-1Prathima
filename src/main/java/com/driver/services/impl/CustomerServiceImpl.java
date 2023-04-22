@@ -99,6 +99,7 @@ public class CustomerServiceImpl implements CustomerService {
 		driver.getTripBookings().remove(tripBooking);
 		driver.getCab().setAvailable(true);
 		tripBooking.setDriver(null);
+		tripBookingRepository2.save(tripBooking);
 	}
 
 	@Override
