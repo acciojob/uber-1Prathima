@@ -52,7 +52,7 @@ public class CustomerServiceImpl implements CustomerService {
 			int min = Integer.MAX_VALUE;
 			List<Driver> drivers = driverRepository2.findAll();
 			for(Driver driver1 : drivers){
-				if(driver1.getCab().isAvailable() == true && driver1.getDriverId() < min){
+				if(driver1.getCab().getAvailable() == true && driver1.getDriverId() < min){
 					min = driver1.getDriverId();
 					cab = driver1.getCab();
 					driver = driver1;
