@@ -91,13 +91,7 @@ public class CustomerServiceImpl implements CustomerService {
 		tripBooking.setDistanceInKm(0);
 		tripBooking.setBill(0);
 		tripBooking.setStatus(TripStatus.CANCELED);
-
-		Customer customer = customerRepository2.findById(tripBooking.getCustomer().getCustomerId()).get();
-		customer.getTripBookings().remove(tripBooking);
-
-		Driver driver = driverRepository2.findById(tripBooking.getDriver().getDriverId()).get();
-		driver.getTripBookings().remove(tripBooking);
-		driver.getCab().setAvailable(true);
+		tripBooking.getDriver().getCab().setAvailable(true);
 		tripBookingRepository2.save(tripBooking);
 
 	}
