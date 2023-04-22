@@ -11,6 +11,9 @@ public class TripBooking {
     private String fromLocation;
     private String toLocation;
     private int distanceInKm;
+    @Enumerated(EnumType.STRING)
+    private TripStatus status;
+    private int bill;
 
     @ManyToOne
     @JoinColumn
@@ -19,10 +22,6 @@ public class TripBooking {
     @ManyToOne
     @JoinColumn
     private Driver driver;
-
-    @Enumerated(EnumType.STRING)
-    private TripStatus status;
-    private int bill;
 
     public TripBooking() {
     }

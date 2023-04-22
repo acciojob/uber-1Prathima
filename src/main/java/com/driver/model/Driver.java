@@ -12,10 +12,6 @@ public class Driver {
     private String mobile;
     private String password;
 
-//    @OneToOne
-//    @JoinColumn
-//    private Cab cab;
-
     @OneToOne(mappedBy = "driver", cascade = CascadeType.ALL)
     private Cab cab;
 
